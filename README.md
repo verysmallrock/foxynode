@@ -5,7 +5,9 @@ A base project for a node.js-based application using CoffeeScript, Stylus, and J
 # Getting Started
 
 `npm install`
+
 `gulp` (in a standalone console)
+
 `nodemon` (in a standalone console)
 
 # Project Info
