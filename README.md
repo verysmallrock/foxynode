@@ -1,4 +1,4 @@
-# Nodebase
+# FoxyNode
 
 A base project for a node.js-based application using CoffeeScript, Stylus, and Jade.  
 
