@@ -1,1 +1,2 @@
-alert 'test 2'
+
+console.log('javascript loaded')

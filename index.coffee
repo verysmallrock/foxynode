@@ -9,6 +9,7 @@ routes = require './server/routes'
 app.set 'views', path.join(__dirname, 'client', 'views')
 app.set 'view engine', 'jade'
 
+app.use(express.static('build'));
 app.use cookieParser()
 app.use '/', routes
 
