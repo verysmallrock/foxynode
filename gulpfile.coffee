@@ -4,6 +4,7 @@ coffee = require 'gulp-coffee'
 concat = require 'gulp-concat'
 uglify = require 'gulp-uglify'
 nodemon = require 'gulp-nodemon'
+livereload = require 'gulp-livereload'
 
 paths =
   scripts: ['client/js/**/*.coffee']
@@ -17,6 +18,7 @@ gulp.task 'build-css', ->
       .pipe stylus()
       .pipe concat('application.css')
       .pipe gulp.dest('build')
+      .pipe livereload()
 
 gulp.task 'build-script', ->
   gulp.src paths.scripts
@@ -25,6 +27,7 @@ gulp.task 'build-script', ->
     .pipe gulp.dest('build')
 
 gulp.task 'watch',->
+  livereload.listen()
   gulp.watch paths.scripts, ['build-script']
   gulp.watch paths.css, ['build-css']
 
@@ -33,7 +36,7 @@ gulp.task 'build', ['build-script', 'build-css']
 gulp.task 'start',->
   nodemon(
     script: 'index.coffee'
-    ext: 'html js coffee css'
+    ext: 'html js coffee'
     env:
       'NODE_ENV': 'development'
   ).on('restart', ->

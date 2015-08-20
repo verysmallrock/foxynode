@@ -26,6 +26,7 @@
     "uglify": "^0.1.5"
   },
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.0"
   }
 }
