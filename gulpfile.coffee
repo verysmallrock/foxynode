@@ -1,6 +1,6 @@
 gulp = require 'gulp'
 stylus = require 'gulp-stylus'
-coffee = require 'gulp-coffee'
+coffee = require 'gulp-coffee2'
 concat = require 'gulp-concat'
 uglify = require 'gulp-uglify'
 nodemon = require 'gulp-nodemon'
